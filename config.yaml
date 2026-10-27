@@ -1,0 +1,14 @@
+# Pipeline settings. Tweak these and re-run instead of editing code.
+filter:
+  low_hz: 0.5      # removes baseline drift and breathing
+  high_hz: 8.0     # removes high-frequency noise, keeps pulse shape
+  order: 4
+window:
+  length_s: 8.0
+  step_s: 2.0
+peaks:
+  min_distance_s: 0.33   # ~180 bpm ceiling
+  prominence: 0.3        # in z-score units
+sqi:
+  min_skew: 0.0
+  min_template_corr: 0.85
